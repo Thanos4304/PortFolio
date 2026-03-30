@@ -28,13 +28,15 @@ export default function Home() {
           <ProjectCards />
           <EducationCard />
 
-          {/* Row 4: Skills + Volunteer + Contact */}
+          {/* Row 4: Skills + Volunteer */}
           <SkillsGrid />
           <VolunteerCard />
-          <ContactCard />
 
           {/* Row 5: Certifications */}
           <CertificationsCard />
+
+          {/* Row 6: Contact */}
+          <ContactCard />
         </div>
       </main>
       <ScrollToTop />

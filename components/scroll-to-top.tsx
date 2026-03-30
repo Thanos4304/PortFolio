@@ -12,17 +12,13 @@ export function ScrollToTop() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
   if (!visible) return null
 
   return (
     <button
-      onClick={scrollToTop}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="fixed bottom-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-card text-primary shadow-lg transition-all hover:border-primary hover:bg-primary/10 hover:scale-110"
       aria-label="Scroll to top"
-      className="fixed bottom-6 right-6 z-50 flex h-9 w-9 items-center justify-center rounded-lg border border-primary/40 bg-background/80 text-primary shadow-lg backdrop-blur-sm transition-all hover:border-primary hover:bg-primary/10 hover:scale-110"
     >
       <ArrowUp className="h-4 w-4" />
     </button>
