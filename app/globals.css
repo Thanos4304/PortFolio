@@ -8,6 +8,15 @@
   }
 }
 
+/* Offset anchor scroll targets so sticky header doesn't cover them */
+#about,
+#experience,
+#projects,
+#skills,
+#contact {
+  scroll-margin-top: 60px;
+}
+
 @layer base {
   :root {
     --background: 240 6% 6%;

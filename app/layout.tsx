@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Sairavi Ganesh — Portfolio",
     images: [
       {
-        url: "/images/profile.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Sairavi Ganesh Viswanathan — Portfolio",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Sairavi Ganesh Viswanathan — Portfolio",
     description:
       "Full-stack developer and ML enthusiast. Computer Engineering graduate student at Illinois Institute of Technology.",
-    images: ["/images/profile.png"],
+    images: ["/opengraph-image"],
   },
   keywords: [
     "Sairavi Ganesh",
