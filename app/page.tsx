@@ -9,6 +9,7 @@ import { VolunteerCard } from "@/components/volunteer-card"
 import { ContactCard } from "@/components/contact-card"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { CertificationsCard } from "@/components/certifications-card"
+import { FadeIn } from "@/components/fade-in"
 
 export default function Home() {
   return (
@@ -18,25 +19,43 @@ export default function Home() {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
           {/* Row 1: Identity + Terminal */}
-          <IdentityCard />
-          <TerminalCard />
+          <FadeIn delay={0} className="md:col-span-2 lg:col-span-2 contents">
+            <IdentityCard />
+          </FadeIn>
+          <FadeIn delay={100}>
+            <TerminalCard />
+          </FadeIn>
 
           {/* Row 2: Experience (full width) */}
-          <ExperienceCards />
+          <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
+            <ExperienceCards />
+          </FadeIn>
 
           {/* Row 3: Projects + Education */}
-          <ProjectCards />
-          <EducationCard />
+          <FadeIn delay={0} className="md:col-span-2 lg:col-span-2 contents">
+            <ProjectCards />
+          </FadeIn>
+          <FadeIn delay={100}>
+            <EducationCard />
+          </FadeIn>
 
           {/* Row 4: Skills + Volunteer */}
-          <SkillsGrid />
-          <VolunteerCard />
+          <FadeIn delay={0} className="md:col-span-1 lg:col-span-2 contents">
+            <SkillsGrid />
+          </FadeIn>
+          <FadeIn delay={100}>
+            <VolunteerCard />
+          </FadeIn>
 
           {/* Row 5: Certifications */}
-          <CertificationsCard />
+          <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
+            <CertificationsCard />
+          </FadeIn>
 
           {/* Row 6: Contact */}
-          <ContactCard />
+          <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
+            <ContactCard />
+          </FadeIn>
         </div>
       </main>
       <ScrollToTop />

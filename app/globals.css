@@ -99,3 +99,24 @@ html {
 .glow-pulse {
   animation: glow-pulse 3s ease-in-out infinite;
 }
+
+/* Scroll-triggered fade-in animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.5s ease forwards;
+}
+
+.fade-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}

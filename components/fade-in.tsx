@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 
 interface FadeInProps {
   children: React.ReactNode
-  delay?: number
+  delay?: number // delay in ms
   className?: string
 }
 
@@ -20,7 +20,7 @@ export function FadeIn({ children, delay = 0, className = "" }: FadeInProps) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true)
-          observer.unobserve(el)
+          observer.disconnect()
         }
       },
       { threshold: 0.1 }
@@ -33,12 +33,8 @@ export function FadeIn({ children, delay = 0, className = "" }: FadeInProps) {
   return (
     <div
       ref={ref}
-      className={className}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0px)" : "translateY(24px)",
-        transition: `opacity 0.5s ease ${delay}ms, transform 0.5s ease ${delay}ms`,
-      }}
+      className={`${visible ? "fade-in-up" : "fade-hidden"} ${className}`}
+      style={{ animationDelay: `${delay}ms` }}
     >
       {children}
     </div>
