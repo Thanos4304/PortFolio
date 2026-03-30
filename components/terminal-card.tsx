@@ -46,6 +46,7 @@ export function TerminalCard() {
   const [input, setInput] = useState("")
   const inputRef = useRef<HTMLInputElement>(null)
   const bottomRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   // Boot sequence
   useEffect(() => {
@@ -60,9 +61,11 @@ export function TerminalCard() {
     }
   }, [visibleLines])
 
-  // Auto-scroll to bottom
+  // Auto-scroll terminal container only (not the whole page)
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight
+    }
   }, [history, visibleLines])
 
   const runCommand = (cmd: string) => {
@@ -114,6 +117,7 @@ export function TerminalCard() {
 
       {/* Output area */}
       <div
+        ref={containerRef}
         className="flex max-h-52 flex-col gap-1 overflow-y-auto font-mono text-xs scrollbar-thin"
         onClick={() => inputRef.current?.focus()}
       >
@@ -169,7 +173,6 @@ export function TerminalCard() {
           </div>
         )}
 
-        <div ref={bottomRef} />
       </div>
     </BentoCard>
   )
