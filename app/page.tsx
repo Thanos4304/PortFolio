@@ -24,7 +24,7 @@ export default function Home() {
           {/* Row 2: Experience (full width) */}
           <ExperienceCards />
 
-          {/* Row 3: Projects (2 cards) + Education */}
+          {/* Row 3: Projects + Education */}
           <ProjectCards />
           <EducationCard />
 
