@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sairavi Ganesh — Portfolio
 
 Personal developer portfolio built with a terminal/cyberpunk bento-grid aesthetic. Features a dark theme with amber accents, animated terminal card, live clock status bar, and responsive layout.
@@ -89,3 +90,7 @@ npx vercel
 ## License
 
 MIT — free to use as a template. Attribution appreciated but not required.
+=======
+# Portfolio
+Portfolio Website for Sai
+>>>>>>> 514545a20828eec3040740fc241f2f43752ecbd7
