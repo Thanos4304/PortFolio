@@ -7,6 +7,8 @@ import { ProjectCards } from "@/components/project-cards"
 import { SkillsGrid } from "@/components/skills-grid"
 import { VolunteerCard } from "@/components/volunteer-card"
 import { ContactCard } from "@/components/contact-card"
+import { ScrollToTop } from "@/components/scroll-to-top"
+import { CertificationsCard } from "@/components/certifications-card"
 
 export default function Home() {
   return (
@@ -30,8 +32,12 @@ export default function Home() {
           <SkillsGrid />
           <VolunteerCard />
           <ContactCard />
+
+          {/* Row 5: Certifications */}
+          <CertificationsCard />
         </div>
       </main>
+      <ScrollToTop />
     </div>
   )
 }
