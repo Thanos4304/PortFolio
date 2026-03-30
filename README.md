@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sairavi Ganesh — Portfolio
 
 Personal developer portfolio built with a terminal/cyberpunk bento-grid aesthetic. Features a dark theme with amber accents, animated terminal card, live clock status bar, and responsive layout.
