@@ -94,6 +94,7 @@ export function TerminalCard() {
 
   const handleKey = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
+      e.preventDefault()
       runCommand(input)
       setInput("")
     }
