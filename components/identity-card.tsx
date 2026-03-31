@@ -68,7 +68,7 @@ export function IdentityCard() {
             href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1.5 rounded border border-primary/40 bg-primary/5 px-3 py-1.5 font-mono text-xs text-primary transition-all hover:border-primary hover:bg-primary/10"
+            className="group inline-flex items-center gap-1.5 rounded border border-border px-3 py-1.5 font-mono text-xs text-muted-foreground transition-all hover:border-primary/50 hover:text-primary"
           >
             <FileText className="h-3 w-3" />
             Resume
