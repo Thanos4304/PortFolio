@@ -3,6 +3,18 @@ import { ArrowUpRight } from "lucide-react"
 
 const experiences = [
   {
+    company: "SabiScholar",
+    role: "Software Developer Intern",
+    period: "Mar 2026 - Present",
+    bullets: [
+      "Spearheaded enhancement of core web platform features and mobile app support, focusing on UI/UX optimization to improve user engagement and cross-platform consistency",
+      "Improved system reliability by implementing comprehensive testing suites and debugging performance bottlenecks, resulting in a 35% reduction in load times",
+      "Integrating AI-powered Smart Search and recommendation engines to personalize the learning experience, surfacing relevant educational content to users",
+      "Developed and optimized RESTful APIs to streamline frontend-backend communication, ensuring high availability and low-latency data retrieval for the student platform",
+    ],
+    tech: ["React", "Node.js", "REST APIs", "AI/ML", "UI/UX"],
+  },
+  {
     company: "Enoah iSolution India Pvt Ltd",
     role: "Full Stack Developer Intern",
     period: "Jan 2025 - May 2025",
@@ -30,8 +42,8 @@ const experiences = [
 
 export function ExperienceCards() {
   return (
-    <div id="experience" className="contents">
-      <BentoCard label="Experience" className="md:col-span-2 lg:col-span-3">
+    <div className="contents">
+      <BentoCard label="Experience" className="md:col-span-2 lg:col-span-3 scroll-mt-16" id="experience">
         <div className="flex flex-col gap-8">
           {experiences.map((exp) => (
             <div key={exp.company} className="group">

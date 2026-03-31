@@ -37,13 +37,13 @@ const projects = [
 
 export function ProjectCards() {
   return (
-    <div id="projects" className="contents">
+    <div className="contents">
       {projects.map((project, index) => (
         <BentoCard
           key={project.name}
           label={project.name}
-          className="md:col-span-1 lg:col-span-1"
-          id={index === 0 ? "projects-anchor" : undefined}
+          className="md:col-span-1 lg:col-span-1 scroll-mt-16"
+          id={index === 0 ? "projects" : undefined}
         >
           <div className="flex items-start justify-between gap-2">
             <div>

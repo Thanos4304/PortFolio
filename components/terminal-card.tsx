@@ -104,7 +104,7 @@ export function TerminalCard() {
   }
 
   return (
-    <BentoCard className="lg:col-span-1">
+    <BentoCard className="lg:col-span-1 h-full">
       {/* Title bar */}
       <div className="mb-3 flex items-center gap-1.5">
         <span className="h-2.5 w-2.5 rounded-full bg-destructive/60" />

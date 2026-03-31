@@ -5,8 +5,8 @@ const CERTIFICATIONS = [
   {
     title: "Machine Learning A-Z",
     issuer: "Udemy",
-    date: "2025",
-    url: "", // Add your certificate URL here
+    date: "2024",
+    url: "/certificates/udemymlcert.pdf",
     tags: ["Python", "ML", "Supervised Learning", "Deep Learning"],
   },
   // Add more certifications here in the future

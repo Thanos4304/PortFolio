@@ -43,7 +43,7 @@ export function SkillsGrid() {
   return (
     <BentoCard
       label="Skills & Tools"
-      className="md:col-span-2 lg:col-span-2"
+      className="md:col-span-2 lg:col-span-2 scroll-mt-16"
       id="skills"
     >
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3">

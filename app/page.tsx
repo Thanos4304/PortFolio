@@ -22,7 +22,7 @@ export default function Home() {
           <FadeIn delay={0} className="md:col-span-2 lg:col-span-2 contents">
             <IdentityCard />
           </FadeIn>
-          <FadeIn delay={100}>
+          <FadeIn delay={100} className="h-full">
             <TerminalCard />
           </FadeIn>
 
@@ -31,30 +31,26 @@ export default function Home() {
             <ExperienceCards />
           </FadeIn>
 
-          {/* Row 3: Projects + Education */}
+          {/* Row 3+4: Projects & Skills (left 2 cols) + Education & Volunteer stacked (right col) */}
           <FadeIn delay={0} className="md:col-span-2 lg:col-span-2 contents">
             <ProjectCards />
           </FadeIn>
-          <FadeIn delay={100}>
+          <FadeIn delay={100} className="flex flex-col gap-3">
             <EducationCard />
+            <VolunteerCard />
           </FadeIn>
 
-          {/* Row 4: Skills + Volunteer */}
+          {/* Row 4: Skills + Contact */}
           <FadeIn delay={0} className="md:col-span-1 lg:col-span-2 contents">
             <SkillsGrid />
           </FadeIn>
-          <FadeIn delay={100}>
-            <VolunteerCard />
+          <FadeIn delay={100} className="h-full">
+            <ContactCard />
           </FadeIn>
 
           {/* Row 5: Certifications */}
           <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
             <CertificationsCard />
-          </FadeIn>
-
-          {/* Row 6: Contact */}
-          <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
-            <ContactCard />
           </FadeIn>
         </div>
       </main>

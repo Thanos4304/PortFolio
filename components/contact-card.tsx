@@ -46,7 +46,7 @@ export function ContactCard() {
   }
 
   return (
-    <BentoCard label="Contact" className="lg:col-span-1" id="contact">
+    <BentoCard label="Contact" className="lg:col-span-1 h-full scroll-mt-16" id="contact">
       <div className="flex flex-col gap-3">
         {links.map((link) => {
           const Icon = link.icon
@@ -90,11 +90,6 @@ export function ContactCard() {
             </div>
           )
         })}
-      </div>
-      <div className="mt-5 border-t border-border pt-4">
-        <p className="font-mono text-[10px] text-muted-foreground">
-          Built with Next.js + Tailwind CSS
-        </p>
       </div>
     </BentoCard>
   )

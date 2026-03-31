@@ -4,11 +4,11 @@ import { ArrowUpRight, Github, FileText } from "lucide-react"
 
 // TODO: Update these with your actual links
 const GITHUB_URL = "https://github.com/sairaviganesh"
-const RESUME_URL = "/resume.pdf" // Add your resume PDF to /public/resume.pdf
+const RESUME_URL = "/resume/SAIRAVI GANESH (1).pdf"
 
 export function IdentityCard() {
   return (
-    <BentoCard className="md:col-span-2 lg:col-span-2" id="about">
+    <BentoCard className="md:col-span-2 lg:col-span-2 scroll-mt-16" id="about">
       <div className="flex flex-col gap-4">
         <div className="flex items-start gap-4">
           <div className="shrink-0">
@@ -40,9 +40,9 @@ export function IdentityCard() {
             Illinois Institute of Technology
           </span>
           . I build full-stack web applications and intelligent systems —
-          currently focused on the intersection of software engineering and
-          machine learning. Previously shipped production code at Enoah
-          iSolution and researched THz image processing at CSIR-CEERI.
+          currently shipping features at SabiScholar and focused on the
+          intersection of software engineering and machine learning. Previously
+          at Enoah iSolution and CSIR-CEERI.
         </p>
         <div className="flex flex-wrap items-center gap-3 pt-1">
           <a
