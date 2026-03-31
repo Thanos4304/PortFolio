@@ -18,7 +18,7 @@ const education = [
 
 export function EducationCard() {
   return (
-    <BentoCard label="Education" className="lg:col-span-1">
+    <BentoCard label="Education" className="flex-1">
       <div className="flex flex-col gap-4">
         {education.map((edu) => (
           <div key={edu.school} className="group flex gap-3">

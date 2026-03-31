@@ -31,26 +31,26 @@ export default function Home() {
             <ExperienceCards />
           </FadeIn>
 
-          {/* Row 3+4: Projects & Skills (left 2 cols) + Education & Volunteer stacked (right col) */}
-          <FadeIn delay={0} className="md:col-span-2 lg:col-span-2 contents">
+          {/* Row 3: Projects full width */}
+          <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
             <ProjectCards />
           </FadeIn>
-          <FadeIn delay={100} className="flex flex-col gap-3">
+
+          {/* Row 4: Skills full width */}
+          <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
+            <SkillsGrid />
+          </FadeIn>
+
+          {/* Row 5: Education + Volunteer */}
+          <FadeIn delay={100} className="md:col-span-2 lg:col-span-3 flex flex-col gap-3 md:flex-row">
             <EducationCard />
             <VolunteerCard />
           </FadeIn>
 
-          {/* Row 4: Skills + Contact */}
-          <FadeIn delay={0} className="md:col-span-1 lg:col-span-2 contents">
-            <SkillsGrid />
-          </FadeIn>
-          <FadeIn delay={100} className="h-full">
-            <ContactCard />
-          </FadeIn>
-
-          {/* Row 5: Certifications */}
-          <FadeIn delay={0} className="md:col-span-2 lg:col-span-3 contents">
+          {/* Row 6: Certifications + Contact */}
+          <FadeIn delay={100} className="md:col-span-2 lg:col-span-3 flex flex-col gap-3 md:flex-row">
             <CertificationsCard />
+            <ContactCard />
           </FadeIn>
         </div>
       </main>

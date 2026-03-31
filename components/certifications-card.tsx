@@ -14,23 +14,23 @@ const CERTIFICATIONS = [
 
 export function CertificationsCard() {
   return (
-    <BentoCard className="md:col-span-2 lg:col-span-3">
+    <BentoCard className="md:col-span-2 lg:col-span-2 flex-1">
       <div className="mb-4 flex items-center gap-2">
         <span className="h-1.5 w-1.5 rounded-full bg-primary" />
         <h2 className="font-mono text-xs font-semibold uppercase tracking-widest text-primary">
           Certifications
         </h2>
       </div>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))" }}>
         {CERTIFICATIONS.map((cert) => (
           <div
             key={cert.title}
-            className="group flex flex-col gap-2 rounded-md border border-border bg-background/50 p-4 transition-all hover:border-primary/40 hover:bg-primary/5"
+            className="group flex flex-col gap-3 rounded-md border border-border bg-background/50 p-5 transition-all hover:border-primary/40 hover:bg-primary/5"
           >
             <div className="flex items-start justify-between gap-2">
               <div className="flex items-center gap-2">
-                <Award className="h-4 w-4 shrink-0 text-primary" />
-                <span className="text-sm font-medium text-card-foreground">
+                <Award className="h-5 w-5 shrink-0 text-primary" />
+                <span className="text-base font-medium text-card-foreground">
                   {cert.title}
                 </span>
               </div>
@@ -41,20 +41,20 @@ export function CertificationsCard() {
                   rel="noopener noreferrer"
                   className="shrink-0 text-muted-foreground transition-colors hover:text-primary"
                 >
-                  <ExternalLink className="h-3.5 w-3.5" />
+                  <ExternalLink className="h-4 w-4" />
                 </a>
               )}
             </div>
-            <div className="flex items-center gap-2 font-mono text-xs text-muted-foreground">
+            <div className="flex items-center gap-2 font-mono text-sm text-muted-foreground">
               <span>{cert.issuer}</span>
               <span>·</span>
               <span>{cert.date}</span>
             </div>
-            <div className="flex flex-wrap gap-1.5 pt-1">
+            <div className="flex flex-wrap gap-2 pt-1">
               {cert.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded border border-border px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground"
+                  className="rounded border border-border px-2 py-0.5 font-mono text-xs text-muted-foreground"
                 >
                   {tag}
                 </span>
@@ -62,6 +62,7 @@ export function CertificationsCard() {
             </div>
           </div>
         ))}
+
       </div>
     </BentoCard>
   )

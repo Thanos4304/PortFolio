@@ -20,7 +20,7 @@ const VOLUNTEER = [
 
 export function VolunteerCard() {
   return (
-    <BentoCard label="Volunteer" className="lg:col-span-1">
+    <BentoCard label="Volunteer" className="flex-1">
       <div className="flex flex-col gap-4">
         {VOLUNTEER.map((item, i) => (
           <div key={i} className="flex gap-3">

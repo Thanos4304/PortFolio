@@ -1,36 +1,50 @@
 import { BentoCard } from "./bento-card"
 import { Github, ExternalLink } from "lucide-react"
 
-// TODO: Replace "#" with your actual GitHub repo URLs
 const projects = [
+  {
+    name: "SabiScholar",
+    tagline: "AI-Powered EdTech Platform",
+    period: "Jan 2026 - Present",
+    description:
+      "Building full-stack features for an AI-driven learning platform. Developing REST APIs, integrating LLM-based tools, and improving frontend performance to deliver a seamless student experience.",
+    metrics: [
+      { label: "Role", value: "SWE" },
+      { label: "Stack", value: "Full" },
+      { label: "Status", value: "Live" },
+    ],
+    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AI/LLM"],
+    github: "",
+    demo: "",
+  },
   {
     name: "SleepGuard",
     tagline: "Real-Time Driver Drowsiness Detection",
     period: "Jan 2025 - May 2025",
     description:
-      "Computer vision system processing 20-25 FPS live video streams with ~92-95% eye-state classification accuracy across 10,000+ images. Reduced false alerts by ~30% via facial landmark optimization and integrated Arduino hardware alerts with <500ms response time.",
+      "Computer vision system processing 20-25 FPS live video with 92-95% eye-state accuracy across 10,000+ images. Reduced false alerts by ~30% and integrated Arduino hardware alerts with <500ms response time.",
     metrics: [
       { label: "Accuracy", value: "92-95%" },
       { label: "Latency", value: "<500ms" },
       { label: "FPS", value: "20-25" },
     ],
     tech: ["Python", "OpenCV", "TensorFlow", "Arduino", "dlib"],
-    github: "#", // TODO: add repo URL
+    github: "#",
     demo: "",
   },
   {
     name: "EFRDAP",
-    tagline: "Enhanced TCP Congestion Control for OBS Networks",
+    tagline: "Enhanced TCP Congestion Control",
     period: "May 2024 - Aug 2024",
     description:
-      "Designed a novel TCP congestion control algorithm improving throughput over traditional burst assembly approaches. Reduced burst loss by ~20% under high traffic and achieved ~15% faster recovery through dynamic congestion window adjustment.",
+      "Novel TCP congestion control algorithm for OBS networks improving throughput over burst assembly. Reduced burst loss by ~20% under high traffic and achieved ~15% faster recovery via dynamic window adjustment.",
     metrics: [
-      { label: "Loss Reduction", value: "~20%" },
-      { label: "Recovery Speed", value: "+15%" },
+      { label: "Loss Cut", value: "~20%" },
+      { label: "Recovery", value: "+15%" },
       { label: "Scenarios", value: "5+" },
     ],
     tech: ["C++", "Network Sim", "TCP/IP", "Algorithm Design"],
-    github: "#", // TODO: add repo URL
+    github: "#",
     demo: "",
   },
 ]
@@ -42,7 +56,7 @@ export function ProjectCards() {
         <BentoCard
           key={project.name}
           label={project.name}
-          className="md:col-span-1 lg:col-span-1 scroll-mt-16"
+          className="md:col-span-1 lg:col-span-1 scroll-mt-16 flex flex-col"
           id={index === 0 ? "projects" : undefined}
         >
           <div className="flex items-start justify-between gap-2">
@@ -79,7 +93,8 @@ export function ProjectCards() {
               )}
             </div>
           </div>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+
+          <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
             {project.description}
           </p>
 
